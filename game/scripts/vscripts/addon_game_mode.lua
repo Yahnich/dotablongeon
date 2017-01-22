@@ -112,7 +112,8 @@ function CDotabloGameMode:OnAbilityUsed(event)
 end
 
 function CDotabloGameMode:FilterOrders( filterTable )
-	if filterTable["order_type"] > 4 and filterTable["order_type"] < 10 then -- check if CAST is valid 
+	if filterTable["order_type"] > 4 and filterTable["order_type"] < 10 and filterTable["queue"] == 0 then -- check if CAST is valid
+		print("get fucked")
 		local ability = EntIndexToHScript( filterTable["entindex_ability"] )
 		local unit = EntIndexToHScript( filterTable["units"]["0"] )
 		if not (ability or unit:IsHero() or ability:IsItem()) then return true end
@@ -125,12 +126,14 @@ end
 
 -- Evaluate the state of the game
 function CDotabloGameMode:OnThink()
-	for _,hero in pairs ( Entities:FindAllByName( "npc_dota_hero*")) do
-		SendCurrentStatus(hero)
-		if hero:GetPrimaryResource() ~= "Rage" then
-			hero:IncreasePrimaryResourceAmount(hero:GetPrimaryResourceRegen()*0.1)
-		elseif hero:GetLastActionTime() + RAGE_DECAY_TIME < GameRules:GetGameTime() then
-			hero:ReducePrimaryResourceAmount(RAGE_DECAY_RATE*0.1)
+	if not GameRules:IsGamePaused() then
+		for _,hero in pairs ( Entities:FindAllByName( "npc_dota_hero*")) do
+			SendCurrentStatus(hero)
+			if hero:GetPrimaryResource() ~= "Rage" then
+				hero:IncreasePrimaryResourceAmount(hero:GetPrimaryResourceRegen()*0.1)
+			elseif hero:GetLastActionTime() + RAGE_DECAY_TIME < GameRules:GetGameTime() then
+				hero:ReducePrimaryResourceAmount(RAGE_DECAY_RATE*0.1)
+			end
 		end
 	end
 	if GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
@@ -142,20 +145,18 @@ end
 function CDotabloGameMode:OnHeroPick(event)
 	print("picked")
 	local hero = EntIndexToHScript(event.heroindex)
-	SendCurrentStatus(hero)
+	local player = hero:GetPlayerOwner()
+	CustomGameEventManager:Send_ServerToPlayer( player, "Update_HPBar", {} )
 	hero:AddNewModifier( hero, nil, "modifier_innate_stats_handler", {})
+	
 end
 
 function SendCurrentStatus(hero)
-	local event_data =
-	{
-		HP = hero:GetHealth(),
-		Max_HP = hero:GetMaxHealth(),
-		Name = hero:GetUnitName(),
-		ResourceType = hero:GetPrimaryResource(),
-		Resource = math.floor(hero:GetPrimaryResourceAmount()),
-		Max_Resource = math.floor(hero:GetMaxPrimaryResourceAmount())
-	}
-	local player = hero:GetPlayerOwner()
-	CustomGameEventManager:Send_ServerToPlayer( player, "Update_HPBar", event_data )
+	local key = hero:GetUnitName()
+	CustomNetTables:SetTableValue( "hero", key, {HP = hero:GetHealth(), 
+												maxHP = hero:GetMaxHealth(), 
+												resourceType = hero:GetPrimaryResource(), 
+												resource = hero:GetPrimaryResourceAmount(), 
+												maxResource = hero:GetMaxPrimaryResourceAmount(), 
+												cooldownReduction = hero:GetCooldownReduction()})
 end

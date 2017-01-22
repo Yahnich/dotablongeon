@@ -26,9 +26,13 @@ function modifier_innate_stats_handler:GetModifierAttackSpeedBonus_Constant()
 end
 
 function modifier_innate_stats_handler:GetModifierPercentageCooldown()
-	local cdr = self:GetParent():GetCooldownReduction()
-	print(cdr)
-	return cdr
+	if IsServer() then
+		local cdr = self:GetParent():GetCooldownReduction()
+		return cdr
+	else
+		local cdr = CustomNetTables:GetTableValue( "hero", self:GetParent():GetUnitName()).cooldownReduction
+		return cdr
+	end
 end
 
 function modifier_innate_stats_handler:GetModifierConstantHealthRegen()

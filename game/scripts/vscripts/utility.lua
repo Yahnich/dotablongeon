@@ -266,6 +266,8 @@ function CDOTA_BaseNPC_Hero:ReducePrimaryResourceAmount(amount)
 end
 
 function CDOTA_BaseNPC_Hero:IncreasePrimaryResourceAmount(amount)
+	self.currPrimaryResource = self.currPrimaryResource or self:GetMaxPrimaryResourceAmount()
+	self.maxPrimaryResource = self.maxPrimaryResource or self:GetMaxPrimaryResourceAmount()
 	if self.currPrimaryResource < self.maxPrimaryResource then
 		self.currPrimaryResource = self.currPrimaryResource + amount
 	end

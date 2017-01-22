@@ -1,0 +1,143 @@
+.hp_bar_panel
+{
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+}
+
+ .hp_bar_avatar
+{
+	margin-top: 50px;
+    width: 142px;
+    height: 188px;
+	margin-left: 10px;
+    overflow: clip;
+	z-index:-1;
+	border-bottom-left-radius: 100px 100px;
+	border-top-right-radius: 100px 100px;
+	border-bottom-right-radius: 100px 100px;
+	border-top-left-radius: 100px 100px;
+}
+
+.hp_bar_parent_resource
+{
+	flow-children: down;
+	width: 280px;
+    height: 272px;
+}
+.hp_bar_parent_resource_dynamic
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+.hp_bar_parent_middle
+{
+	flow-children: right;
+	width: 1366px;
+    height: 272px;
+}
+.ability
+{
+	width: 124px;
+    height: 124px;
+}
+.abilitybar
+{
+	flow-children: right;
+	margin-left: 50px;
+}
+#abilitybar_parent
+{
+	vertical-align: center;
+	flow-children: right;
+	margin-left: 125px;
+	margin-top: 70px;
+}
+#hp_bar_parent_shield
+{
+	horizontal-align: right;
+    vertical-align: top;
+	width: 561px;
+    height: 157px;
+}
+
+#hp_bar_general
+{
+	flow-children: right;	
+	horizontal-align: left;
+	vertical-align: bottom;
+ }
+#mana_bar_dynamic_container
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	height: 100%;
+	width: 100%;
+	z-index: -5;
+	margin-right: 15px;
+	margin-bottom: -25px;
+}
+#hp_bar_dynamic_container
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	height: 100%;
+	width: 100%;
+	z-index: -5;
+	margin-right: 15px;
+}
+#hp_bar_parent_hp_clip
+{
+	margin-left: 40px;
+	vertical-align: bottom;
+}
+#hp_bar_parent_resource_clip
+{
+	
+}
+ #hp_bar_mana
+ #hp_bar_health
+{
+    horizontal-align: right;
+	clip: rect( 0%, 100%, 100%, 0% );
+    z-index:5;
+	color: #FF0000;
+
+    background-position: 0% 0%;
+ }
+.mana_bar_text_container
+{
+	flow-children: down;
+	font-size: 18px;
+    font-weight: bold;
+	color: #FFFFFF;
+	horizontal-align: middle;
+	vertical-align: middle;
+ }
+.hp_bar_text_container
+{
+	flow-children: down;
+	font-size: 18px;
+    font-weight: bold;
+	color: #FFFFFF;
+	horizontal-align: center;
+	vertical-align: center;
+	margin-left: 35px;
+	margin-top: 80px;
+ }
+ .hp_bar_text
+{
+	font-size: 18px;
+    font-weight: bold;
+	color: #FFFFFF;
+ }
+  #hp_bar_name
+{
+	font-size: 19px;
+    font-weight: bold;
+	vertical-align: bottom;
+	margin-bottom: -20px;
+	margin-left: 20px;
+	horizontal-align: center;
+	color: #FFFFFF;
+ }

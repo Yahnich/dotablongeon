@@ -1,0 +1,238 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Spellsword
+	//=================================================================================================================
+	"npc_dota_hero_juggernaut"
+	{
+		"override_hero"				"npc_dota_hero_juggernaut"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"12"
+		"AttackDamageMax"			"15"
+		"AttackRate"				"2"
+		"AttackAnimationPoint"		"0.2"
+		"VisionDaytimeRange" "1800"
+		"VisionNighttimeRange" "1200"
+		"MovementTurnRate"			"4.0"
+		
+		"Ability1"	"juggernaut_blade_fury"
+		"Ability2"	"juggernaut_healing_ward"
+		"Ability3"	"juggernaut_omni_slash"
+		"Ability4"	"juggernaut_blade_dance"
+
+		//ATTRIBUTES
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"6"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseIntelligence"		"4"
+		"AttributeIntelligenceGain"		"1.2"
+		"AttributeBaseAgility"		"8"
+		"AttributeAgilityGain"		"1.7"
+		
+		//BASE RESOURCES
+		"StatusResource"	"Arcane"
+		"StatusStamina"	"0"
+		"StatusHealth"	"100"
+		"StatusMana"	"0"
+		"StatusArcane"	"125"
+		
+		//REGEN
+		"StatusHealthRegen"			"2.0"
+		"StatusManaRegen"			"0"
+		"StatusArcaneRegen"		"5"
+		
+		//RESISTANCES
+		"ArmorPhysical"		"1"
+		"MagicalResistance"		"0"
+		"FireResistance"		"4"
+		"IceResistance"			"4"
+		"LightningResistance"	"4"
+		"SpiritResistance"		"-4"
+		"NatureResistance"		"0"
+	}
+	"npc_dota_hero_sven"
+	{
+		"override_hero"				"npc_dota_hero_sven"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"18"
+		"AttackDamageMax"			"20"
+		"AttackRate"				"2.2"
+		"AttackAnimationPoint"		"0.2"
+		"VisionDaytimeRange" "1800"
+		"VisionNighttimeRange" "1200"
+		"MovementTurnRate"			"4.0"
+		
+		"Ability1"	"sven_storm_bolt"
+		"Ability2"	"sven_warcry"
+		"Ability3"	"sven_gods_strength"
+		"Ability4"	"sven_great_cleave"
+
+		//ATTRIBUTES
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"9"
+		"AttributeStrengthGain"		"2"
+		"AttributeBaseIntelligence"		"2"
+		"AttributeIntelligenceGain"		"1.2"
+		"AttributeBaseAgility"		"4"
+		"AttributeAgilityGain"		"1.3"
+		
+		//BASE RESOURCES
+		"StatusResource"	"Rage"
+		"StatusStamina"		"0"
+		"StatusHealth"		"150"
+		"StatusMana"		"0"
+		"StatusRage"		"100"
+		
+		//REGEN
+		"StatusHealthRegen"			"2.0"
+		"StatusManaRegen"			"0"
+		"StatusRageRegen"			"0"
+		"StatusRageOnHit"			"5"
+		
+		//RESISTANCES
+		"ArmorPhysical"			"6"
+		"MagicalResistance"		"0"
+		"FireResistance"		"1"
+		"IceResistance"			"1"
+		"LightningResistance"	"1"
+		"SpiritResistance"		"1"
+		"NatureResistance"		"1"
+	}
+	"npc_dota_hero_drow_ranger"
+	{
+		"override_hero"				"npc_dota_hero_drow_ranger"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"18"
+		"AttackDamageMax"			"20"
+		"AttackRate"				"1.9"
+		"AttackAnimationPoint"		"0.3"
+		"VisionDaytimeRange" "1800"
+		"VisionNighttimeRange" "1200"
+		"MovementTurnRate"			"4.0"
+		
+		"Ability1"	"phantom_assassin_stifling_dagger"
+		"Ability2"	"drow_ranger_wave_of_silence"
+		"Ability3"	"phantom_assassin_phantom_strike"
+		"Ability4"	"templar_assassin_refraction"
+
+		//ATTRIBUTES
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"4"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseIntelligence"		"1"
+		"AttributeIntelligenceGain"		"0.5"
+		"AttributeBaseAgility"		"10"
+		"AttributeAgilityGain"		"2"
+		
+		//BASE RESOURCES
+		"StatusResource"	"Stamina"
+		"StatusStamina"		"300"
+		"StatusHealth"		"75"
+		"StatusMana"		"0"
+		"StatusRage"		"0"
+		
+		//REGEN
+		"StatusHealthRegen"			"1.0"
+		"StatusManaRegen"			"0"
+		"StatusStaminaRegen"		"1.5"
+		"StatusStaminaOnHit"		"0.5"
+		
+		//RESISTANCES
+		"ArmorPhysical"			"3"
+		"MagicalResistance"		"0"
+		"FireResistance"		"2"
+		"IceResistance"			"2"
+		"LightningResistance"	"0"
+		"SpiritResistance"		"0"
+		"NatureResistance"		"5"
+	}
+	"npc_dota_hero_warlock"
+	{
+		"override_hero"				"npc_dota_hero_warlock"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"10"
+		"AttackDamageMax"			"12"
+		"AttackRate"				"2.3"
+		"AttackAnimationPoint"		"0.3"
+		"VisionDaytimeRange" "1800"
+		"VisionNighttimeRange" "1200"
+		"MovementTurnRate"			"4.0"
+
+		//ATTRIBUTES
+		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"6"
+		"AttributeStrengthGain"		"0.9"
+		"AttributeBaseIntelligence"		"12"
+		"AttributeIntelligenceGain"		"2.4"
+		"AttributeBaseAgility"		"3"
+		"AttributeAgilityGain"		"1.1"
+		
+		//BASE RESOURCES
+		"StatusResource"	"Mana"
+		"StatusStamina"		"0"
+		"StatusHealth"		"75"
+		"StatusMana"		"100"
+		"StatusRage"		"0"
+		
+		//REGEN
+		"StatusHealthRegen"			"1.0"
+		"StatusManaRegen"			"3"
+		"StatusStaminaRegen"		"0"
+		"StatusRageOnHit"			"0"
+		
+		//RESISTANCES
+		"ArmorPhysical"			"0"
+		"MagicalResistance"		"0"
+		"FireResistance"		"2"
+		"IceResistance"			"2"
+		"LightningResistance"	"2"
+		"SpiritResistance"		"-3"
+		"NatureResistance"		"5"
+	}
+	"npc_dota_hero_lone_druid"
+	{
+		"override_hero"				"npc_dota_hero_lone_druid"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"15"
+		"AttackDamageMax"			"16"
+		"AttackRate"				"2.3"
+		"AttackAnimationPoint"		"0.3"
+		"VisionDaytimeRange" "1800"
+		"VisionNighttimeRange" "1200"
+		"MovementTurnRate"			"4.0"
+
+		//ATTRIBUTES
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"4"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseIntelligence"		"1"
+		"AttributeIntelligenceGain"		"0.5"
+		"AttributeBaseAgility"		"10"
+		"AttributeAgilityGain"		"2"
+		
+		//BASE RESOURCES
+		"StatusResource"	"Stamina"
+		"StatusStamina"		"300"
+		"StatusHealth"		"150"
+		"StatusMana"		"0"
+		"StatusRage"		"0"
+		
+		//REGEN
+		"StatusHealthRegen"			"1.0"
+		"StatusManaRegen"			"3"
+		"StatusStaminaRegen"		"0"
+		"StatusStaminaOnHit"	"6"
+		
+		//RESISTANCES
+		"ArmorPhysical"			"2"
+		"MagicalResistance"		"0"
+		"FireResistance"		"0"
+		"IceResistance"			"0"
+		"LightningResistance"	"0"
+		"SpiritResistance"		"5"
+		"NatureResistance"		"5"
+	}
+}

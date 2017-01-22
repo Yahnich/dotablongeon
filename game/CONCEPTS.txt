@@ -1,0 +1,481 @@
+Strength:
+-- Gives health
+-- Gives health regen bonus
+-- Gives critical hit damage
+-- Gives physical amp(?)
+-- Gives heal amp(?)
+-- Gives bonus rage pool (?)
+-- Gives bonus rage regen (?)
+
+Agility:
+-- Gives attackspeed
+-- Gives armor
+-- Gives critical hit chance
+-- Gives stamina(?)
+-- Gives stamina regen (?)
+
+Intelligence
+-- Gives all elemental resistances
+-- Gives cooldown reduction
+-- Gives cast point reduction (?)
+-- Gives spell amp
+-- Gives mana if applicable
+-- Gives mana regen if applicable
+
+-------------------------------------------------
+GAMEPLAY
+-------------------------------------------------
+Pseudo-Diablo gameplay with focus on role speciaization (big waves and bosses require a good tank and dps with heals of some sort)
+2 maps, hardcore (hard reset every playthrough); seasonal (keep progress?)
+trawl through a dungeon as a team beating increasingly difficult mobs until you beat the boss, beating the boss zones you to the next dungeon; option to travel back to town to buy and option to farm in gold dungeons
+
+-------------------------------------------------
+RESISTANCES
+-------------------------------------------------
+Basic Damage Types:
+Arcane: 0 (Pure, does not combine)
+Fire: 1
+Ice: 2
+Lightning: 4
+Spirit: 8
+Nature: 16
+Physical: 32
+
+Composite Damage Types:
+Holy: Spirit + Lightning = 12
+Undead: Spirit + Nature = 24
+Demonic: Spirit + Fire = 9
+Bleed: Nature + Physical = 48
+
+
+
+-------------------------------------------------
+Classes
+-------------------------------------------------
+Overview:
+2 BASICS (top): One free attack when out of resource and cooldowns; one minor cost attack that is stronger but does cost resources if no cooldowns available
+4 POWERS (middle): Various special effects
+2 PASSIVES (bot): Empowers active abilities or grants constant bonuses
+
+start game with 1 basic, 1 power and 1 passive; gain another passive at half max level (like 50 max level?); gain a POWER slot every 10 levels (getting all of them at 30): you gain second BASIC slot at level 5
+at max level gain a Mastery point, that lets you buff one particular POWER (interchangeable) or recieve ULTIMATE(?).
+
+
+The Spellsword - 100 Arcane
+
+Specializations:
+
+Cataclysm: Lightning + Fire
+-- Spark Slice - Teleports to the enemy if not in range, but within 400 range and deals lightning damage / 5 Arcane
+-- Meteoric Strike: Leaps high in the air and then crashes into a random enemy in the point target radius, dealing minor AOE damage on impact
+
+-- Thundering Inferno - constant 0.1s tick interval random lightning strikes in an aoe at point target; all units standing in the aoe also receive constant Fire DoT
+-- Raijin Speed - MS boost, every walk cycle unleashes shock pulses that move randomly and disappear when hitting an enemy; killing an enemy increases its duration
+-- Living Bomb: Become a flame and take over an enemy, giving you control of them for xs and becoming invulnerable; the enemy takes damage while taken over and if they die while infested explode in a massive aoe
+-- Thunderbird - Transforms the hero to pure lightning; transporting them to the point target and dealing damage to all enemies they pass through
+-- Flickering God - Hero grows in size, gaining increased attack speed, movement speed and evasion. Arcane and cooldowns are instantly refreshed
+-- Great Heat: Sends out a slice of fire, deals more damage point-blank
+-- Immolation: Engulfs and enemy in flames, enemies they touch also receive the remaining duration of the debuff
+-- Fulmination: Zaps one enemy for massive Lightning damage; sending out a wave that deals Fire damage to enemies on hit
+
+
+Passives:
+Conductivity: Increases lightning damage dealt but increases Lightning damage taken + other benefits: 
+- Meteoric Strike replaced by Tempest: Sends out a slowly moving electrically charged shockwave that deals Lightning damage to all enemies within its active AoE, deals more damage the closer they are.
+- Raijin Speed and Flickering God duration is increased by 1s every time a lightning power is used, 
+- Tempest now homes in to the nearest enemy rather than moving randomly, 
+- Thunderbird speed increased and damage dealt increases with distance
+- Thundering Inferno lightning strikes now hit 2 enemies every tick instead of 1
+- Fulmination Hits 1 random enemy near to the target with the lightning
+Inner Flame: Fire damage grants Life on hit; if arcane is insufficient cost will be paid in health. + these benefits:
+- Spark Slice: replaced by Burning Edge: Placing a stacking fire DoT that reduces enemy armor by -1 per stack
+- Thundering Inferno: Fire Dot now increases in damage the longer the enemy stays in it.
+- Living Bomb: Infested enemy deals AoE damage around itself based on % of self-damage
+- Great Heat: damage does not decrease
+- Immolation: Pass AOE increased
+- Fulmination: Fire wave lingers on the ground
+Natural Disaster: Using a POWER ability reduces the cooldowns of every ability by 5 seconds.
+Dual Synergy: dealing Fire Damage will temporarily increase Lightning Damage dealt, dealing Lightning Damage will increase Fire Damage dealt.
+Rampage: Killing an enemy with an ability resets the cooldown of that ability.
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+Phantomblade: Spirit + Ice
+-- Cold Blade: Slows target, has a chance to unleash a line behind them that slows and damages enemies / FREE
+-- Soulfrost Slash: Attacks all enemies in a cone infront of the spellsword, slowing and damaging them; if they get slowed 4 times by this they get briefly stunned / 5 Arcane
+
+-- Winter's Slide: Turn rate is slowed drastically; spellsword slides forwards, slowing and damaging all enemies caught in the path; if the enemy stands in the ice path for 2 seconds they become frozen until Winter's Path ends or after 1 second.
+-- Screaming Sword: Jumps erratically to enemies in its duration; dealing Spirit Damage on arrival and then attacking them with Cold Blade.
+-- Blizzard: Creates a huge whirling typhoon that slows movement and attack every tick, freezing them until Blizzard ends when movement speed is at the minimum.
+-- Cold Snap: Freezes all enemies in an aoe rooting and disarming them, deals no damage; unstunnable enemies are slowed instead, after cold snap ends, enemies are vulnerable to getting briefly stunned every time they're hit by cold damage for 5s
+-- Riftwalker: Goes into the spirit plane, becoming invulnerable and attack immune; healing a total of  20% max hp during its duration
+-- Glacial Tomb: Freezes allied unit, stopping them from doing anything but providing heal and physical damage immunity; enemies attacking the tomb are slowed and receive minor damage
+-- 9th Circle: Spellsword emits a huge wave of cold, dealing Spirit and Ice damage and slowing the enemy more every second while increasing Spellsword's movement speed.
+-- Spirit Sanctum: Creates a large circle around Spellsword, disarming him but healing him significantly; all spells deal a % of their damage in Spirit Damage while Spellsword stands in it
+
+Passives:
+Spiritus Domine: Spirit Damage has a chance to inflict Fear
+Cold Soul: Cold Snap has a chance to proc passively when attacked, Riftwalker will proc automatically if available when receiving fatal damage without going on cooldown (but consuming Arcane).
+Unwavering Will: While in Spirit Sanctum, Spellsword is no longer disarmed and all abilities deal Spirit Damage
+Phantasm: Riftwalker now deals Spirit damage to all enemies Spellsword passes through and grants free pathing, Screaming Sword leaves an afterimage behind that keeps attacking the enemy for the remainder of the duration.
+Mourning Chill: Killing an enemy releases a spirit that heads towards the nearest enemy, exploding in an AoE and freezing the enemy.
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+Blademancer: Summons weapons, Physical damage mostly
+-- Javelin Rush: Hits all enemies in a line in front of Spellsword with a summoned Javelin
+-- Great Cleave: Summon a large sword that swings in a 180 cone infront of Spellsword
+
+-- Dance of Blades: Summons swords that spin around Spellsword, dealing Physical damage every time a sword hits an enemy
+-- Legendary Weapon: Increases Spellsword's attack damage
+-- Warrior's Execution: Channels for up to 4 seconds; once channeling is ended will spawn directional rows of spears depending on the time channeled, will always spawn at least 1 row (in front of Spellsword)
+-- Reverberating Slam: Slams the ground infront of Spellsword with a massive greathammer; dealing major damage and stunning anyone hit directly by the initial hit and sending aftershocks that damage and briefly ministun anyone close
+-- Giant's Shield: Summons a shield that blocks any projectile for x seconds.
+-- Stream of Daggers: Shoots a dagger laser (a laser made out of daggers; a daser if you will)
+-- Substitute: Summons a suit of armor at point target, swapping positions with the armor when damaged.
+-- Ethereal Armory: Briefly changes all Physical damage to Arcane damage.
+
+
+Passives:
+Volatile Connection: The summons will now have a chance to despawn in an explosion of Arcane damage.
+Elemental Enchantment: Damage types randomly changed from Physical to Lightning, Fire, Ice or Arcane (Ethereal Armory damage type change has priority)
+Unlimited Power: All cooldowns reduced by %, arcane costs reduced by %
+Bastion: Giant's Shield now also grants Spellsword and all allies a large armor boost, Legendary Weapon is now also applied to allies, Substitute will now takes the damage Spellsword would have taken
+Honed Skills: Javelin Rush now becomes a projectile that pierces enemies, Warrior's Execution's max channel time is now reduced by x seconds., Great Cleave now hits in a 360 cone.
+
+-----------------------------------------------------------------
+
+The Huntress - 300 Stamina
+Specializations:
+Archery: Mobility focused Range kiting
+-- Great Arrow: Knocks back enemy slightly, crit briefly stuns as well / FREE
+-- Spread Shot: Shoots arrows in a cone/ 5 STAMINA
+
+-- Fletched Grapple: Hooks to the nearest enemy and pulls Huntress towards them; if no enemy is found it will instead hook Huntress to the end of the hook 
+-- Bow Kata: Quickly attack all enemies in a radius; 5s duration; disarmed during
+-- Rain of Arrows: Attack an point area with a rain of arrows; arrows rain down for 2s 
+-- Crippling Wounds: Shoots enemy's feet; can never crit but slows enemy greatly 
+-- Ricochet: Shoots an arrow that ricochets between enemies
+-- Hidden Arrow: Huntress jumps backwards, shooting arrows to the nearest enemies; has no cast point if used after Crouching Bow; can't turn during
+-- Crouching Bow: Huntress takes a dedicated stance, slowing her while its active but increasing her attackspeed
+-- Venomous Ammo: Huntress dips her current quiver in poison, changing damage type to Nature for 10 attacks and dealing stacking Nature damage DoT on top of base damage
+
+Passives:
+Nerves of Steel: Crouching Bow, Great Arrow, Crippling Wounds and Ricochet do increased damage to enemies close to Huntress
+Pursuit: Huntress gains attackspeed and movespeed from every unit near her that's under half health or has less health than her; whichever is greater.
+Hunting Rhythm: Huntress gains movespeed for every unit attacked the last 15 seconds.
+Focus: Huntress loses % of her current attackspeed; but gains evasion and movement speed based on her lost attackspeed compared to maximum attackspeed (50% to both at max attackspeed)
+Veteran Hunter: Increases the radius of Spread Shot, Bow Kata, Rain of Arrows and Hidden Arrow
+
+Nomad: Trap focused Range/Melee kiting HAS A DOGGO
+-- Bound Chains: MELEE: Swipe in a cone infront of you hitting all enemies / RANGED: Chain down one enemy, stunning them briefly / FREE
+-- Sic Em - Huntress' hound attacks the targeted enemy, rooting them briefly and giving the dog bonus attack and damage / 5 STAMINA
+
+-- Pocket Spikes: Throws caltrops in a cone, dealing damage on impact as well as damage while standing in the spiked area (doesn't stack)
+-- Smokescreen: Throws smoke at the ground, granting brief invisibility and movespeed while choking the enemies for minor Nature damage 
+-- Acidic Jar: Lowers enemy's physical and nature armor, deals minor Nature damage 
+-- Explosive Flask: Throws a bomb that deals Fire damage in an AoE
+-- Shock Bolt: Fires a bolt that pierces everything in a line, dealing physical damage on impact and then shocks every hit enemy for Lightning damage once the projectile ends
+-- Oil Spill: Throws a jar to a point target that creates an oil spill, slowing enemies that walk on it; enemies on Oil Spills that are attacked by Fire Damage will ignite the Oil Spill, making it deal Fire damage for its duration; explosive flask will ignite if its aoe hits oil spill
+-- Sticky White Stuff: Sprays a stream of sticky white stuff over the enemies, dealing Ice damage and slowing their movement and attackspeed; if spray is kept on the same target for 1s they are frozen and fire damage will deal bonus damage to them at the expense of stopping the stun
+-- Bear Traps: Throws x amount of bear traps that roots enemies and amplifies the damage they take 
+
+Passives:
+The Long Hunt: Traps last longer and have increased radius
+Schadenfreude: Every enemy caught by a trap increases Huntress' damage
+Easy Prey: Trapped enemies grants a +crit chance bonus to their attackers
+Feral Spirit: Huntress' dog shares his owner's relevant passive bonuses, Huntress gains movement speed every time Sic Em is used
+Survival Instinct: When under % HP you gain increased stamina regen and cooldown reduction as well as significant cdr on smokescreen
+
+
+Execution: High DPS; Melee semi-tanking through skill usage
+-- Deep Wounds: Applies a stack of Deep Wounds; Deep Wounds slows for 5% per stack and deals damage over time in Bleed damage; lasts 10 seconds / FREE
+-- Cutthroat Slice: Silences the enemy, while applying multiple Deep Wounds stacks; deals more damage and applies more stacks when backstabbing/ 5 STAMINA
+
+-- Grievous Strike: Deals massive damage to a single target
+-- Slice 'n Dice: Jumps forwards; attacking every unit on your path, attacks are dealt instantly. 
+-- Cauterized Blade: Slices all enemies in a cone infront of you for Fire Damage; deals additional bonus damage to the first target, deals reduced bonus damage to every target after (-20% bonus damage per target)
+-- Flurry of Blows: Attacks in a cone infront of you rapidly for 3 seconds; allowing you to move (disarmed during it) while dealing multiple damage instances
+-- Reversal: Blocks all incoming physical attacks for 2s, dealing a counterattack for every blow; disarmed during it
+-- Exciting Aura: Increases attackspeed; activating it doubles the bonus it provides; reserves 15%
+-- Wild	 Aura: Increases resource regeneration; activating it doubles the bonus it provides; reserves 15% stamina
+-- Thrill of the Hunt: Increases primary attribute and movement speed; activating it doubles the bonus it provides; reserves 30% stamina, but every kill reduces this by 5%, down to max 5%. % reserved goes up every 5 seconds after the last kill.
+
+Passives:
+Master of Blades: Reversal, Flurry of Blows, Slice 'n Dice cooldowns reduced. Using these abilities reduces Grievous Strike cooldown by 1s.
+Firebrand: Non-basic attacks damage type changed to Fire; Cauterized Blade reduces cooldown of other abilities by one second per target hit with bonus damage.
+Uncanny Perception: Every basic attack gives you a stack of Perception; after 5 stacks you will deal a guaranteed crit at double your current crit value (120% becomes 140%)
+Quick 'n Nimble: Any hit that would deal more than 10% of your health will be capped to 10% and the damage is done percentually to stamina instead; uses reserved stamina as well.
+Tireless: Passive stamina regen increased; Stamina max increased; Aura reserved stamina reduced by 5%
+Bloodlust: Gain stamina for every basic attack (Deep Wounds gains 5 Stamina; Cutthroat Slice cost reduced/removed)
+
+
+The Warlord
+Berserker: -- DUAL WIELD
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- Dervish Dash: Dashes to a direction in a zigzag pattern, slicing everyone in his spinning blades for as long as they're in its aoe
+-- Wild Howl: Boosts all allied movement and attackspeed.
+-- Berserker's Rage: Loses control of your unit, but the unit receives a major attackspeed, movement speed and attack damage bonus. 
+-- : 
+-- : 
+-- : 
+-- : 	
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+Reaver: -- TWO HANDED SPEC
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- Leap Smash: Leaps over all enemies, slamming down his sword on top of the enemies on his land location
+-- Bullying: Lowers every type of enemy's armor.
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+Guardian: -- SHIELD SPEC
+-- Punish: Deals damage to a single target, reducing all their resistances for x seconds. / FREE
+-- Shield Bash: Smashes your shield into all enemies infront of you, knocking them back and ministunning them./ 5 STAMINA
+
+-- Valiant Rush: Rushes towards the targeted unit, taunting all enemies around the Warlord when the rush ends.
+-- Victorious Shout: Grants +all resistances to all allied units.
+-- Pommel Strike: Dazes the enemy, debuffing them with miss and randomly causing them to stop their current order. 
+-- Anchor Howl: Taunts the enemy to you, dealing massive damage to them if they change targets within x seconds of the debuff ending. 
+-- Glorious Shield: Blinds the enemy, dealing Lightning Damage to them. 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+The Cultist
+Diabolism: -- SUMMONS STRONG SINGULAR MINIONS,NO STACKING, SELF BUFFS
+-- Deepfire Ember: Throws a fireball that deals Demonic damage; different bonus effects when Transfer Power is active depending on Demonic Power/ FREE
+-- Soul Consumption: Creates a link that consumes life and changes it into hp or mana for the Cultist for as long as its held in; spirit damage/ 5 STAMINA
+
+-- Baphomet Pulse: AOE shockwave around the Cultist and all his minions, deals Fire Damage damage doesn't stack.
+-- Chione's Breath: Granted attack and moveslow on hit effect to Cultist and all his minions; toggle; consumes mana per slow applied
+-- Cerberus Claws: Briefly turns melee; granting a major damage buff
+-- Summon Moloch: lightning based demon; permanent - ability goes on cooldown when Moloch dies
+-- Summon Naamah: cc and poison based demon; permanent - ability goes on cooldown when Naamah dies
+-- Solomon's Key: Summons a random temporary strong demon (Ziminar of the North, Amaymon of the East, Corson of the South, Gaap of the West) (Ziminar: Ice Damage, slows)(Amaymon: Nature damage, weakens)(Corson: Fire damage, -armor)(Gaap: Spirit damage, charms)
+-- Demonic Rift: Creates a portal lasting 10 seconds at the point target and a portal randomly placed around the Cultist, walking into a portal teleports you to the other one; enemies can't use it; entering and exiting the portal creates a shockwave that damages
+-- Transfer Power: Cultist kills the targeted demonic summoned unit and consumes their power; putting the summon ability on cooldown until the buff ends and killing the unit. Cultist gains a buff based on the demon consumed
+
+Passives:
+Reincarnation: Transfer Power no longer puts the summoning ability on cooldown.
+Diablerie: You can now have both Moloch and Naamah active, but their health pool is shared, meaning any damage one takes is dealt to the shared health pool
+Eldritch Gifts: Summoning a new demon now creates a massive Fire Pit around the aoe, Baphomet Pulse also reduces fire armor; Cerberus Claws also gain life on hit; Chione's Breath also grants bonus movespeed; Demonic Rift stays longer (+5s?)
+Essence Sap: The next Deepfire Ember gains damage and splash radius for every point of health Soul Consumption drains in one cast. Empowered Deepfire heals Cultist and his minions based on its drain bonus damage.
+Embryonic Link: Cultist shares his essence with his demons and they share theirs with him; everyone receives 33% less damage but this damage is transferred to the other; heals are also transferred
+
+Necromancy: -- SUMMONS WEAK HORDES OF SKELLINGTONS, MINION BUFFS
+-- Black Plague: small aoe, shortish range; infects all hit enemy units with plague, if an allied unit is within x radius they also gain the debuff at the same strength; stacks per recast / FREE
+-- Bell Tolls: Cultist raises the dead in an aoe; their hands stick out of the ground grabbing anything they find; if they find anything they climb out of the ground and slow/deal damage to the unit until killed/ 5 STAMINA
+
+-- Skeletal Rush: Skeletons rise from the ground running at the enemies; dying when they attack the first target they reach
+-- Mass of Flesh: A wall of flesh rises in a line; enemies caught take Nature DoT and are stunned; enemies on the side are dealt one time Nature damage; the wall spreads a plague aura that deals nature damage
+-- Skeleton Archer: Summons a skeletal archer
+-- Zombie Brute: Summons a zombie tanky frontliner
+-- Carnethrus: Summons a weak, fast hound unit
+-- Bone Wave: Cultist rides a wave of bones that pushes all enemies out of the way and damages them 
+-- Fleshcraft: Heals an allied unit (except skeletal minions), healing them once and then giving them a minor HoT; deals minor damage over time to enemies; damage increases based on Black Plague stacks
+-- Pestilence: Sacrifices all non-skeletal summoned units; making them explode for one time Nature damage and applying Black Plague stacks
+
+Passives:
+Living Enmity: All minions (including skeletal rush minions) receive a damage bonus to non-spirit units
+Blood Magic: % of costs is turned into health cost; passively gain %hp per second.
+Reanimated Bones: Skeletal Minions will reanimate once to full health before dying completely.
+Legion: If two units get near each other and are not attacking or being attacked they will combine into Flesh Golems.
+Epidemic: If Pestilence kills a unit, a a zombie version of themselves at 10% hp will spawn on top of the dead unit and Pestilence's cooldown is reduced by x seconds.
+
+Malediction: -- AOE DOT KING
+-- Affliction: Applies a random debuff to a target  / FREE
+-- Ego Shatter: Deals AOE damage based on amount of debuff target has / 5 STAMINA
+
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+
+
+The Skinwalker
+Druid: -- Mage form, summons
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+ 
+Predator: -- DPS form
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+Behemoth: -- Tanky form
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+
+
+The Justicar:
+Retribution: -- Thorns damage bruiser
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+Absolution: -- Heal-focused bruiser
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+Penance: -- dps buffs through self-damage
+-- :  / FREE
+-- : / 5 STAMINA
+
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+-- : 
+
+Passives:
+:
+:
+:
+:
+:
+
+-------------------------------------
+TO DO LIST
+- CHARACTER SCREEN (INVENTORY, EQUIPMENT, BONUSES)
+- SKILL TREE (LEVELING, DRAGGING TO HUD)
+- RANDOM ENCOUNTER SYSTEM (ELITES, BOSSES)
+- ZONE INSTANCING
+- ITEM LOOT SYSTEM
+- WARLORD IDEA
+- CULTIST IDEA
+- SKINWALKER IDEA
+- ELITE IDEAS
+- INSTANCE MAPS (FULL RESET)
+- SEASON MAP (KEEP PROGRESSION)
+
+DONE
+- DAMAGE SYSTEM
+- RESOURCE MANAGEMENT
+- SPELLSWORD IDEA
+- HUNTRESS IDEA

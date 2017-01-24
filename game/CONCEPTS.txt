@@ -18,17 +18,18 @@ Intelligence
 -- Gives all elemental resistances
 -- Gives cooldown reduction
 -- Gives cast point reduction (?)
--- Gives spell amp
+-- Gives spell amp (only relevant for base damage, ADS damage ignores spell amp as it naturally scales)
 -- Gives mana if applicable
 -- Gives mana regen if applicable
 
 -------------------------------------------------
 GAMEPLAY
 -------------------------------------------------
-Pseudo-Diablo gameplay with focus on role speciaization (big waves and bosses require a good tank and dps with heals of some sort)
+Pseudo-Diablo gameplay with focus on role speciaization (big waves and bosses require at least a semi-tank or good kiting and dps with heals of some sort)
 2 maps, hardcore (hard reset every playthrough); seasonal (keep progress?)
 trawl through a dungeon as a team beating increasingly difficult mobs until you beat the boss, beating the boss zones you to the next dungeon; option to travel back to town to buy and option to farm in gold dungeons
 
+allow pvp duels; so make sure power levels are equal
 -------------------------------------------------
 RESISTANCES
 -------------------------------------------------
@@ -47,20 +48,52 @@ Undead: Spirit + Nature = 24
 Demonic: Spirit + Fire = 9
 Bleed: Nature + Physical = 48
 
+-------------------------------------------------
+ABILITY PROGRESSION
+-------------------------------------------------
+Overview:
+LAYOUT:
+2 BASICS (top): One free attack when out of resource and cooldowns; one minor cost attack that is stronger but does cost resources if no cooldowns available; Spec-Specific
+4 POWERS (middle): Various special effects; s
+2 PASSIVES (bot): Empowers active abilities or grants constant bonuses
 
+SKILL TREE:
+3 specializations; need to pick one when starting the game to receive your BASICs and gain 1 PASSIVE point and one POWER point (can only be put into initial spec). Gain PASSIVE point every x levels and 1 POWER point every y levels
+leveling a POWER improves it and at max level lets you pick a MASTERY of that power, improving it
 
+BASICS: will stay the same throughout the entire game, only changeable through passives(?)
+POWERS: can be freely skilled, but you do not grants a free POWER of that type, 
+PASSIVES: can be freely chosen
+
+allow choice to branch out into other specs (does not affect the set BASICs as they are always based on first spec); branching out is needed for certain masteries
+
+UPGRADING POWERS:
+skill tree style, needs prerequisite abilities (always only of the same spec, will never need an ice ability to progress the fire tree)
+
+example:
+burn : simple aoe point target
+inferno: requires burn
+
+abilities have synergies, usually based upon the prerequisite ability (leveling burn will also marginally improve inferno) 
+synergy improvement depends on likeness and differences
+example: if burn scorches an area to do damage over time to enemies within it and inferno doesnt, inferno gains this if burn is higher than lv1 (requires some investment for any value)
+
+mastery example:
+Fire Strike 0/4; maxed at lv 20; simply deals bonus fire damage
+MASTERIES:
+Inferno Strike: fire damage becomes aoe
+Soulburn Strike: fire damage slows and deals bonus spirit damage REQUIRES ICE SPEC
+Molten Strike: decreases physical armor REQUIRES BLADE SPEC
+
+intention: keep lower level abilities relevant and possible build alternatives rather than just getting the highest tiers asap; keep sense of progression without rendering lower abilities useless
+
+http://imgur.com/a/2Tjit -- Example
+
+Upgrading PASSIVES:
+directly improve abilities and need no further leveling, can have multiple passives leveled, but can only have 2(?) active at any time
 -------------------------------------------------
 Classes
 -------------------------------------------------
-Overview:
-2 BASICS (top): One free attack when out of resource and cooldowns; one minor cost attack that is stronger but does cost resources if no cooldowns available
-4 POWERS (middle): Various special effects
-2 PASSIVES (bot): Empowers active abilities or grants constant bonuses
-
-start game with 1 basic, 1 power and 1 passive; gain another passive at half max level (like 50 max level?); gain a POWER slot every 10 levels (getting all of them at 30): you gain second BASIC slot at level 5
-at max level gain a Mastery point, that lets you buff one particular POWER (interchangeable) or recieve ULTIMATE(?).
-
-
 The Spellsword - 100 Arcane
 
 Specializations:
@@ -143,7 +176,7 @@ Volatile Connection: The summons will now have a chance to despawn in an explosi
 Elemental Enchantment: Damage types randomly changed from Physical to Lightning, Fire, Ice or Arcane (Ethereal Armory damage type change has priority)
 Unlimited Power: All cooldowns reduced by %, arcane costs reduced by %
 Bastion: Giant's Shield now also grants Spellsword and all allies a large armor boost, Legendary Weapon is now also applied to allies, Substitute will now takes the damage Spellsword would have taken
-Honed Skills: Javelin Rush now becomes a projectile that pierces enemies, Warrior's Execution's max channel time is now reduced by x seconds., Great Cleave now hits in a 360 cone.
+Honed Skills: Javelin Rush now becomes a projectile that pierces enemies, Warrior's Execution's max channel time is now reduced by x seconds while still granting full effect, Great Cleave now hits in a 360 cone.
 
 -----------------------------------------------------------------
 
@@ -312,7 +345,7 @@ Living Enmity: All minions (including skeletal rush minions) receive a damage bo
 Blood Magic: % of costs is turned into health cost; passively gain %hp per second.
 Reanimated Bones: Skeletal Minions will reanimate once to full health before dying completely.
 Legion: If two units get near each other and are not attacking or being attacked they will combine into Flesh Golems.
-Epidemic: If Pestilence kills a unit, a a zombie version of themselves at 10% hp will spawn on top of the dead unit and Pestilence's cooldown is reduced by x seconds.
+Epidemic: If Pestilence kills a unit, a zombie version of themselves at 10% hp will spawn on top of the dead unit and Pestilence's cooldown is reduced by x seconds.
 
 Malediction: -- AOE DOT KING
 -- Affliction: Applies a random debuff to a target  / FREE
@@ -472,7 +505,7 @@ TO DO LIST
 - SKINWALKER IDEA
 - ELITE IDEAS
 - INSTANCE MAPS (FULL RESET)
-- SEASON MAP (KEEP PROGRESSION)
+- JOURNEY MAP (KEEP PROGRESSION)
 
 DONE
 - DAMAGE SYSTEM

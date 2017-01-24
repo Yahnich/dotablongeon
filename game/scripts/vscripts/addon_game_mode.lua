@@ -158,5 +158,6 @@ function SendCurrentStatus(hero)
 												resourceType = hero:GetPrimaryResource(), 
 												resource = hero:GetPrimaryResourceAmount(), 
 												maxResource = hero:GetMaxPrimaryResourceAmount(), 
+												resourceRegen = hero:GetPrimaryResourceRegen(),
 												cooldownReduction = hero:GetCooldownReduction()})
 end

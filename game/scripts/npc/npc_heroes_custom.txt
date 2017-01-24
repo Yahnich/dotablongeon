@@ -21,7 +21,9 @@
 		"Ability1"	"juggernaut_blade_fury"
 		"Ability2"	"juggernaut_healing_ward"
 		"Ability3"	"juggernaut_omni_slash"
-		"Ability4"	"juggernaut_blade_dance"
+		"Ability4"	"phantom_assassin_phantom_strike"
+		"Ability5"	"templar_assassin_refraction"
+		"Ability6"	"juggernaut_blade_dance"
 
 		//ATTRIBUTES
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"

@@ -9,21 +9,120 @@
 	"npc_dota_hero_juggernaut"
 	{
 		"override_hero"				"npc_dota_hero_juggernaut"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"12"
 		"AttackDamageMax"			"15"
 		"AttackRate"				"2"
-		"AttackAnimationPoint"		"0.2"
-		"VisionDaytimeRange" "1800"
-		"VisionNighttimeRange" "1200"
+		"AttackRange"				"200"
+		"AttackAnimationPoint"		"0.33"
+		"VisionDaytimeRange" 		"1800"
+		"VisionNighttimeRange" 		"1200"
 		"MovementTurnRate"			"4.0"
 		
-		"Ability1"	"juggernaut_blade_fury"
-		"Ability2"	"juggernaut_healing_ward"
-		"Ability3"	"juggernaut_omni_slash"
-		"Ability4"	"phantom_assassin_phantom_strike"
-		"Ability5"	"templar_assassin_refraction"
-		"Ability6"	"juggernaut_blade_dance"
+		"Ability1"	"spellsword_spark_slice"
+		"Ability2"	"class_empty_2"
+		"Ability3"	"class_empty_3"
+		"Ability4"	"class_empty_4"
+		"Ability5"	"class_empty_5"
+		"Ability6"	"class_empty_6"
+		
+		"SkillTree"
+		{
+			"Cataclysm"
+			{
+				"Basic"
+				{
+					"spellsword_spark_slice"	"1"
+					"spellsword_meteoric_slice"	"1"
+				}
+				"Power"
+				{
+					"spellsword_thundering_inferno"	"25"
+					"spellsword_raijin_speed"		"1"
+					"spellsword_living_bomb"		"1"
+					"spellsword_thunderbird"		"10"
+					"spellsword_flickering_god"		"15"
+					"spellsword_great_heat"			"5"
+					"spellsword_immolation"			"15"
+					"spellsword_fulmination"	"20"
+				}
+				"Passive"
+				{
+					"spellsword_conductivity" "25"
+					"spellsword_inner_flame" "25"
+					"spellsword_natural_disaster" "10"
+					"spellsword_dual_synergy" "20"
+					"spellsword_rampage" "15"
+				}
+			}
+			"Phantomblade"
+			{
+				"Basic"
+				{
+					"spellsword_cold_blade"			"1"
+					"spellsword_soulfrost_slash"	"1"
+				}
+				"Power"
+				{
+					"spellsword_winters_slide"		"1"
+					"spellsword_screaming_sword"	"5"
+					"spellsword_blizzard"			"15"
+					"spellsword_cold_snap"			"1"
+					"spellsword_riftwalker"			"1"
+					"spellsword_glacial_tomb"		"5"
+					"spellsword_ninth_circle"
+					{
+						"spellsword_glacial_tomb"	"10"
+					}
+					"spellsword_spirit_sanctum"
+					{
+						"spellsword_ninth_circle"	"20"
+					}
+				}
+				"Passive"
+				{
+					"spellsword_spirit_domine" 		"25"
+					"spellsword_cold_soul" 			"10"
+					"spellsword_unwavering_will"	"20"
+					"spellsword_phantasm" 			"10"
+					"spellsword_mourning_chill" 	"15"
+				}
+			}
+			"Blademancer"
+			{
+				"Basic"
+				{
+					"spellsword_javelin_rush"	"1"
+					"spellsword_great_cleave"	"1"
+				}
+				"Power"
+				{
+					"spellsword_dance_of_blades"		"1"
+					"spellsword_legendary_weapon"		"15"
+					"spellsword_warriors_execution"		
+					{
+						"spellsword_dance_of_blades"	"20"
+					}
+					"spellsword_reverberating_slam"		"15"
+					"spellsword_giants_shield"			"5"
+					"spellsword_stream_of_daggers"		"1"
+					"spellsword_substitute"				"10"
+					"spellsword_ethereal_armory"		
+					{
+						"spellsword_legendary_weapon"	"25"
+						"spellsword_giants_shield"		"25"
+					}
+				}
+				"Passive"
+				{
+					"spellsword_volatile_connection" 	"15"
+					"spellsword_elemental_enchantment" 	"15"
+					"spellsword_unlimited_power" 		"10"
+					"spellsword_bastion" 				"20"
+					"spellsword_honed_skills" 			"25"
+				}
+			}
+		}
 
 		//ATTRIBUTES
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
@@ -58,7 +157,7 @@
 	"npc_dota_hero_sven"
 	{
 		"override_hero"				"npc_dota_hero_sven"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"18"
 		"AttackDamageMax"			"20"
 		"AttackRate"				"2.2"
@@ -67,10 +166,64 @@
 		"VisionNighttimeRange" "1200"
 		"MovementTurnRate"			"4.0"
 		
-		"Ability1"	"sven_storm_bolt"
-		"Ability2"	"sven_warcry"
-		"Ability3"	"sven_gods_strength"
-		"Ability4"	"sven_great_cleave"
+		"Ability1"	"class_empty_1"
+		"Ability2"	"class_empty_2"
+		"Ability3"	"class_empty_3"
+		"Ability4"	"class_empty_4"
+		"Ability5"	"class_empty_5"
+		"Ability6"	"class_empty_6"
+		
+		"SkillTree"
+		{
+			"Berserker"
+			{
+				"Basic"
+				{
+				}
+				"Power"
+				{
+					"warlord_dervish_dash"			"1"
+					"warlord_wild_howl"			"10"
+					"warlord_berserkers_rage"		"20"
+				}
+				"Passive"
+				{
+				}
+			}
+			"Reaver"
+			{
+				"Basic"
+				{
+				}
+				"Power"
+				{
+					"warlord_leap_smash"			"1"
+					"warlord_bullying"				"5"
+				}
+				"Passive"
+				{
+				}
+			}
+			"Guardian"
+			{
+				"Basic"
+				{
+					"warlord_punish"		"1"
+					"warlord_shield_bash"	"1"
+				}
+				"Power"
+				{
+					"warlord_valiant_rush"				"15"
+					"warlord_victorious_shout"			"1"
+					"warlord_pommel_strike"			"5"
+					"warlord_anchor_howl"				"10"
+					"warlord_glorious_shield"			"1"
+				}
+				"Passive"
+				{
+				}
+			}
+		}
 
 		//ATTRIBUTES
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
@@ -106,7 +259,7 @@
 	"npc_dota_hero_drow_ranger"
 	{
 		"override_hero"				"npc_dota_hero_drow_ranger"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"18"
 		"AttackDamageMax"			"20"
 		"AttackRate"				"1.9"
@@ -115,10 +268,104 @@
 		"VisionNighttimeRange" "1200"
 		"MovementTurnRate"			"4.0"
 		
-		"Ability1"	"phantom_assassin_stifling_dagger"
-		"Ability2"	"drow_ranger_wave_of_silence"
-		"Ability3"	"phantom_assassin_phantom_strike"
-		"Ability4"	"templar_assassin_refraction"
+		"Ability1"	"class_empty_1"
+		"Ability2"	"class_empty_2"
+		"Ability3"	"class_empty_3"
+		"Ability4"	"class_empty_4"
+		"Ability5"	"class_empty_5"
+		"Ability6"	"class_empty_6"
+		
+		"SkillTree"
+		{
+			"Archery"
+			{
+				"Basic"
+				{
+					"huntress_great_arrow"	"1"
+					"huntress_spread_shot"	"1"
+				}
+				"Power"
+				{
+					"huntress_fletched_grapple"	"1"
+					"huntress_bow_kata"
+					{
+						"huntress_rain_of_arrows"	"25"
+					}
+					"huntress_rain_of_arrows"		"20"
+					"huntress_crippling_wounds"		"1"
+					"huntress_ricochet"				"10"
+					"huntress_hidden_arrow"			"5"
+					"huntress_crouching_bow"		"15"
+					"huntress_venomous_ammo"		"5"
+				}
+				"Passive"
+				{
+					"huntress_nerves_of_steel"	"20"
+					"huntress_pursuit" 			"10"
+					"huntress_hunting_rhythm" 	"15"
+					"huntress_focus" 			"25"
+					"huntress_veteran_hunter" 	"25"
+				}
+			}
+			"Nomad"
+			{
+				"Basic"
+				{
+					"huntress_bound_chains"	"1"
+					"huntress_sic_em"		"1"
+				}
+				"Power"
+				{
+					"huntress_pocket_spikes"		"1"
+					"huntress_smokescreen"			"5"
+					"huntress_acidic_jar"			"10"
+					"huntress_explosive_flask"		"1"
+					"huntress_shock_bolt"			"15"
+					"huntress_oil_spill"			"5"
+					"huntress_sticky_white_stuff"	"15"
+					"huntress_bear_traps"			"20"
+					
+				}
+				"Passive"
+				{
+					"huntress_the_long_hunt" 		"15"
+					"huntress_schadenfreude" 		"25"
+					"huntress_easy_prey"			"20"
+					"huntress_feral_spirit"			"10"
+					"huntress_survival_instinct" 	"15"
+				}
+			}
+			"Execution"
+			{
+				"Basic"
+				{
+					"huntress_deep_wounds"		"1"
+					"huntress_cutthroat_slice"	"1"
+				}
+				"Power"
+				{
+					"huntress_grievous_strike"			"15"
+					"huntress_slice_n_dice"				"1"
+					"huntress_cauterized_blade"			"5"
+					"huntress_flurry_of_blows"
+					{
+						"huntress_slice_n_dice"			"10"
+					}
+					"huntress_reversal"					"1"
+					"huntress_exciting_aura"			"10"
+					"huntress_wild_aura"				"15"
+					"huntress_thrill_of_hunt"			"20"
+				}
+				"Passive"
+				{
+					"huntress_master_of_blades" 	"20"
+					"huntress_firebrand" 			"15"
+					"huntress_uncanny_perception" 	"10"
+					"huntress_bloodlust" 			"15"
+					"huntress_tireless" 			"25"
+				}
+			}
+		}
 
 		//ATTRIBUTES
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
@@ -154,7 +401,7 @@
 	"npc_dota_hero_warlock"
 	{
 		"override_hero"				"npc_dota_hero_warlock"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"10"
 		"AttackDamageMax"			"12"
 		"AttackRate"				"2.3"
@@ -162,6 +409,90 @@
 		"VisionDaytimeRange" "1800"
 		"VisionNighttimeRange" "1200"
 		"MovementTurnRate"			"4.0"
+		
+		"Ability1"	"class_empty_1"
+		"Ability2"	"class_empty_2"
+		"Ability3"	"class_empty_3"
+		"Ability4"	"class_empty_4"
+		"Ability5"	"class_empty_5"
+		"Ability6"	"class_empty_6"
+		
+		"SkillTree"
+		{
+			"Diabolism"
+			{
+				"Basic"
+				{
+					"cultist_deepfire_ember"	"1"
+					"cultist_soul_consumption"	"1"
+				}
+				"Power"
+				{
+					"cultist_baphomet_pulse"	"1"
+					"cultist_chione_breath"		"5"
+					"cultist_cerberus_claws"	"10"
+					"cultist_summon_moloch"		"1"
+					"cultist_summon_naamah"		"1"
+					"cultist_solomon_key"		"15"
+					"cultist_demonic_rift"		"10"
+					"cultist_transfer_power"	"20"
+				}
+				"Passive"
+				{
+					"cultist_reincarnation"		"25"
+					"cultist_diablerie" 		"10"
+					"cultist_eldritch_gifts" 	"15"
+					"cultist_essence_sap" 		"15"
+					"cultist_embryonic_link" 	"20"
+				}
+			}
+			"Necromancy"
+			{
+				"Basic"
+				{
+					"cultist_black_plague"	"1"
+					"cultist_bell_tolls"	"1"
+				}
+				"Power"
+				{
+					"cultist_skeletal_rush"		"15"
+					"cultist_mass_of_flesh"		"10"
+					"cultist_skeleton_archer"	"1"
+					"cultist_zombie_brute"		"1"
+					"cultist_carnethrus"		"5"
+					"cultist_bone_wave"			"15"
+					"cultist_fleshcraft"		"10"
+					"cultist_pestilence"		"20"
+				}
+				"Passive"
+				{
+					"cultist_living_enmity"		"20"
+					"cultist_blood_magic" 		"15"
+					"cultist_reanimated_bones" 	"10"
+					"cultist_legion" 			"15"
+					"cultist_epidemic" 			"25"
+				}
+			}
+			"Malediction"
+			{
+				"Basic"
+				{
+					"cultist_punish"		"1"
+					"cultist_shield_bash"	"1"
+				}
+				"Power"
+				{
+					"cultist_valiant_rush"				"15"
+					"cultist_victorious_shout"			"1"
+					"cultist_pommel_strike"			"5"
+					"cultist_anchor_howl"				"10"
+					"cultist_glorious_shield"			"1"
+				}
+				"Passive"
+				{
+				}
+			}
+		}
 
 		//ATTRIBUTES
 		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
@@ -197,7 +528,7 @@
 	"npc_dota_hero_lone_druid"
 	{
 		"override_hero"				"npc_dota_hero_lone_druid"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"15"
 		"AttackDamageMax"			"16"
 		"AttackRate"				"2.3"
@@ -205,6 +536,13 @@
 		"VisionDaytimeRange" "1800"
 		"VisionNighttimeRange" "1200"
 		"MovementTurnRate"			"4.0"
+		
+		"Ability1"	"class_empty_1"
+		"Ability2"	"class_empty_2"
+		"Ability3"	"class_empty_3"
+		"Ability4"	"class_empty_4"
+		"Ability5"	"class_empty_5"
+		"Ability6"	"class_empty_6"
 
 		//ATTRIBUTES
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"

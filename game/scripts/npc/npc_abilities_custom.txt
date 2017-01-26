@@ -6,28 +6,40 @@
 	//=================================================================================================================
 	// Ability: Juggernaut Blade Dance
 	//=================================================================================================================
-	"juggernaut_blade_dance"
+	"spellsword_spark_slice"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"juggernaut_blade_dance"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"blade_dance_crit_mult"		"200"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"blade_dance_crit_chance"	"20 25 30 35"
-			}
-		}
+		"ScriptFile"                    "abilities/spellsword/spellsword_spark_slice"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "juggernaut_blade_dance"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+		"AbilityElementalDamageType"	"DAMAGE_TYPE_LIGHTNING"
+        
+        "AbilityChannelTime"            "0.0"
+        "MaxLevel"                      "1"
+
+        // Cost
+        "AbilityManaCost"               "0"
+		"AbilityArcaneCost"				"-5"
+        
+        // Special
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "teleport_distance"         "400"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage_pct"              	"80"
+            }
+        }
 	}
 
 	//=================================================================================================================
@@ -1068,5 +1080,71 @@
 				"gods_strength_damage_scepter"	"75 100 125"		
 			}
 		}
+	}
+	//=================================================================================================================
+	// Lifestealer: Empty 4
+	//=================================================================================================================
+	"class_empty_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"life_stealer_empty_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+	}
+	//=================================================================================================================
+	// Lifestealer: Empty 4
+	//=================================================================================================================
+	"class_empty_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"life_stealer_empty_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+	}
+	//=================================================================================================================
+	// Lifestealer: Empty 4
+	//=================================================================================================================
+	"class_empty_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"life_stealer_empty_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+	}
+	//=================================================================================================================
+	// Lifestealer: Empty 4
+	//=================================================================================================================
+	"class_empty_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"life_stealer_empty_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+	}
+	//=================================================================================================================
+	// Lifestealer: Empty 4
+	//=================================================================================================================
+	"class_empty_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"life_stealer_empty_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+	}
+	//=================================================================================================================
+	// Lifestealer: Empty 4
+	//=================================================================================================================
+	"class_empty_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"life_stealer_empty_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
 	}
 }

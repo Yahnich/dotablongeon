@@ -62,7 +62,7 @@ SKILL TREE:
 leveling a POWER improves it and at max level lets you pick a MASTERY of that power, improving it
 
 BASICS: will stay the same throughout the entire game, only changeable through passives(?)
-POWERS: can be freely skilled, but you do not grants a free POWER of that type, 
+POWERS: can be freely skilled, but does not grant a free POWER of that type, 
 PASSIVES: can be freely chosen
 
 allow choice to branch out into other specs (does not affect the set BASICs as they are always based on first spec); branching out is needed for certain masteries
@@ -103,12 +103,36 @@ Cataclysm: Lightning + Fire
 -- Meteoric Strike: Leaps high in the air and then crashes into a random enemy in the point target radius, dealing minor AOE damage on impact
 
 -- Thundering Inferno - constant 0.1s tick interval random lightning strikes in an aoe at point target; all units standing in the aoe also receive constant Fire DoT
+--- Mastery 1:
+---
+---
+
+
 -- Raijin Speed - MS boost, every walk cycle unleashes shock pulses that move randomly and disappear when hitting an enemy; killing an enemy increases its duration
+
+
+
 -- Living Bomb: Become a flame and take over an enemy, giving you control of them for xs and becoming invulnerable; the enemy takes damage while taken over and if they die while infested explode in a massive aoe
+
+
+
 -- Thunderbird - Transforms the hero to pure lightning; transporting them to the point target and dealing damage to all enemies they pass through
+
+
+
+
 -- Flickering God - Hero grows in size, gaining increased attack speed, movement speed and evasion. Arcane and cooldowns are instantly refreshed
+
+
+
 -- Great Heat: Sends out a slice of fire, deals more damage point-blank
+
+
+
 -- Immolation: Engulfs and enemy in flames, enemies they touch also receive the remaining duration of the debuff
+
+
+
 -- Fulmination: Zaps one enemy for massive Lightning damage; sending out a wave that deals Fire damage to enemies on hit
 
 
@@ -116,7 +140,6 @@ Passives:
 Conductivity: Increases lightning damage dealt but increases Lightning damage taken + other benefits: 
 - Meteoric Strike replaced by Tempest: Sends out a slowly moving electrically charged shockwave that deals Lightning damage to all enemies within its active AoE, deals more damage the closer they are.
 - Raijin Speed and Flickering God duration is increased by 1s every time a lightning power is used, 
-- Tempest now homes in to the nearest enemy rather than moving randomly, 
 - Thunderbird speed increased and damage dealt increases with distance
 - Thundering Inferno lightning strikes now hit 2 enemies every tick instead of 1
 - Fulmination Hits 1 random enemy near to the target with the lightning
@@ -238,9 +261,8 @@ Execution: High DPS; Melee semi-tanking through skill usage
 
 Passives:
 Master of Blades: Reversal, Flurry of Blows, Slice 'n Dice cooldowns reduced. Using these abilities reduces Grievous Strike cooldown by 1s.
-Firebrand: Non-basic attacks damage type changed to Fire; Cauterized Blade reduces cooldown of other abilities by one second per target hit with bonus damage.
+Firebrand: Non-basic attacks damage type changed from Physical to Fire; Cauterized Blade reduces cooldown of other abilities by one second per target hit with bonus damage.
 Uncanny Perception: Every basic attack gives you a stack of Perception; after 5 stacks you will deal a guaranteed crit at double your current crit value (120% becomes 140%)
-Quick 'n Nimble: Any hit that would deal more than 10% of your health will be capped to 10% and the damage is done percentually to stamina instead; uses reserved stamina as well.
 Tireless: Passive stamina regen increased; Stamina max increased; Aura reserved stamina reduced by 5%
 Bloodlust: Gain stamina for every basic attack (Deep Wounds gains 5 Stamina; Cutthroat Slice cost reduced/removed)
 

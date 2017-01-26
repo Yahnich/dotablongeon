@@ -1,44 +1,59 @@
+-- SETUP GLOBAL VARIABLES
 DAMAGE_TYPE_FIRE = 16
 DAMAGE_TYPE_ICE = 32
 DAMAGE_TYPE_LIGHTNING = 64
 DAMAGE_TYPE_SPIRIT = 128
 DAMAGE_TYPE_NATURE = 256
 
+GameRules.ElementalDamageEnum = {["DAMAGE_TYPE_ARCANE"] = DAMAGE_TYPE_PURE,
+								 ["DAMAGE_TYPE_FIRE"] = DAMAGE_TYPE_FIRE,
+								 ["DAMAGE_TYPE_ICE"] = DAMAGE_TYPE_ICE,
+								 ["DAMAGE_TYPE_LIGHTNING"] = DAMAGE_TYPE_LIGHTNING,
+								 ["DAMAGE_TYPE_SPIRIT"] = DAMAGE_TYPE_SPIRIT,
+								 ["DAMAGE_TYPE_NATURE"] = DAMAGE_TYPE_NATURE}
+
 RAGE_DECAY_RATE = 10
 RAGE_DECAY_TIME = 4
 
+-- LINK GLOBAL MODIFIERS
 LinkLuaModifier( "modifier_innate_stats_handler", "abilities/modifiers/modifier_innate_stats_handler.lua" ,LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_innate_stats_handler_critical", "abilities/modifiers/modifier_innate_stats_handler.lua" ,LUA_MODIFIER_MOTION_NONE )
 
--- Generated from template
+
 require('utility')
+
 if CDotabloGameMode == nil then
 	CDotabloGameMode = class({})
 end
 
 function Precache( context )
-	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts", context)
+	-- PARTICLE PRECACHE
 	PrecacheResource( "particle", "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf", context)
 	PrecacheResource( "particle", "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact_mechanical.vpcf", context)
-	
-	--[[
-		Precache things we know we'll use.  Possible file types include (but not limited to):
-			PrecacheResource( "model", "*.vmdl", context )
-			PrecacheResource( "soundfile", "*.vsndevts", context )
-			PrecacheResource( "particle", "*.vpcf", context )
-			PrecacheResource( "particle_folder", "particles/folder", context )
-	]]
+	PrecacheResource( "particle", "particles/phantom_assassin_naturecrit_impact.vpcf", context)
+	PrecacheResource( "particle", "particles/phantom_assassin_spiritcrit_impact.vpcf", context)
+	PrecacheResource( "particle", "particles/phantom_assassin_icecrit_impact.vpcf", context)
+	PrecacheResource( "particle", "particles/phantom_assassin_lightningcrit_impact.vpcf", context)
+	PrecacheResource( "particle", "particles/phantom_assassin_firecrit_impact.vpcf", context)
+	PrecacheResource( "particle", "particles/phantom_assassin_arcanecrit_impact.vpcf", context)
+	-- SOUND PRECACHE
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context)
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts", context)
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context)
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts", context)
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts", context)
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts", context)
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts", context)
 end
 
--- Create the game mode when we activate
 function Activate()
 	GameRules.CGameMode = CDotabloGameMode()
 	GameRules.CGameMode:InitGameMode()
 end
 
 function CDotabloGameMode:InitGameMode()
-	print( "Template addon is loaded." )
 	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
+	MergeTables(GameRules.UnitKV, LoadKeyValues("scripts/npc/npc_units_custom.txt"))
+	MergeTables(GameRules.UnitKV, LoadKeyValues("scripts/npc/npc_units.txt"))
 	
 	GameRules.AbilityKV = LoadKeyValues("scripts/npc/npc_abilities_custom.txt")
 	MergeTables(GameRules.AbilityKV, LoadKeyValues("scripts/npc/npc_items_custom.txt"))
@@ -61,7 +76,7 @@ function CDotabloGameMode:FilterDamage( filterTable )
     end
 	local inflictor = filterTable["entindex_inflictor_const"]
 	local damageType = filterTable["damagetype_const"]
-	local damage = filterTable["damage_const"]
+	local damage = filterTable["damage"]
 	
     local victim = EntIndexToHScript( victim_index )
     local attacker = EntIndexToHScript( attacker_index )
@@ -104,7 +119,7 @@ function CDotabloGameMode:OnAbilityUsed(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.PlayerID)
 	if not hero or not hero:IsHero() then return end
 	local abilityused = hero:FindAbilityByName(event.abilityname)
-	hero.lastAbilityUsedTime = GameRules:GetGameTime()
+	hero.lastEventTime = GameRules:GetGameTime()
 	if not abilityused then return end
 	if hero:GetPrimaryResource() ~= "Mana" then
 		hero:ReducePrimaryResourceAmount(abilityused:GetPrimaryResourceCost())
@@ -113,7 +128,6 @@ end
 
 function CDotabloGameMode:FilterOrders( filterTable )
 	if filterTable["order_type"] > 4 and filterTable["order_type"] < 10 and filterTable["queue"] == 0 then -- check if CAST is valid
-		print("get fucked")
 		local ability = EntIndexToHScript( filterTable["entindex_ability"] )
 		local unit = EntIndexToHScript( filterTable["units"]["0"] )
 		if not (ability or unit:IsHero() or ability:IsItem()) then return true end
@@ -143,7 +157,6 @@ function CDotabloGameMode:OnThink()
 end
 
 function CDotabloGameMode:OnHeroPick(event)
-	print("picked")
 	local hero = EntIndexToHScript(event.heroindex)
 	local player = hero:GetPlayerOwner()
 	CustomGameEventManager:Send_ServerToPlayer( player, "Update_HPBar", {} )
